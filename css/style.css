@@ -1,0 +1,699 @@
+.u-margin-right {
+  margin-right: 3rem; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 400;
+  background-color: #0a192f; }
+
+.text__header {
+  font-family: "Ubuntu", sans-serif !important;
+  color: #BFD7EA;
+  font-weight: 500 !important;
+  font-size: 2.6rem !important;
+  text-transform: capitalize; }
+  .text__header h2 {
+    margin-bottom: 8.5rem; }
+    .text__header h2::after {
+      content: "";
+      height: 2px;
+      width: 38rem;
+      background-color: #087E8B;
+      display: inline-block;
+      transform: translateY(-1rem);
+      margin-left: 1.7rem; }
+
+.text__subheader {
+  font-family: "Ubuntu", sans-serif !important;
+  color: #BFD7EA;
+  font-weight: 500 !important;
+  font-size: 2.6rem !important;
+  text-transform: capitalize;
+  text-align: center; }
+  .text__subheader h4 {
+    margin-bottom: 4.5rem; }
+
+.card {
+  position: relative; }
+  .card:hover .card__face-1 .content {
+    opacity: 1; }
+  .card:hover .card__face-1 .source {
+    opacity: 1; }
+  .card:hover .card__face-1 {
+    transform: translateY(0); }
+  .card__face {
+    transition: .5s; }
+    .card__face-1 {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #172a45;
+      z-index: 1;
+      padding: 2rem;
+      transform: translateY(13rem); }
+      .card__face-1 .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: .3;
+        transition: .5s; }
+        .card__face-1 .content h3 {
+          font-family: "Ubuntu Mono", monospace !important;
+          color: #BFD7EA;
+          font-weight: 700 !important;
+          font-size: 2.1rem !important;
+          margin-top: 1rem; }
+      .card__face-1 .source {
+        position: absolute;
+        top: 2rem;
+        right: 1rem;
+        display: flex;
+        flex-direction: column;
+        opacity: .3; }
+        .card__face-1 .source a {
+          text-decoration: none !important;
+          color: #BFD7EA;
+          font-size: 1.7rem;
+          transition: all .3s ease-in-out; }
+          .card__face-1 .source a:not(:last-child) {
+            margin-bottom: 1.3rem; }
+          .card__face-1 .source a:hover {
+            transform: scale(1.15); }
+    .card__face-2 {
+      position: relative;
+      background-color: #9197AE;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.8); }
+      .card__face-2 p {
+        line-height: 1.3;
+        font-family: "Poppins", sans-serif !important;
+        color: #172a45;
+        font-weight: 400 !important;
+        font-size: 1.2rem !important;
+        text-align: center; }
+      .card__face-2--tools {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 1.7rem;
+        font-family: "Poppins", sans-serif !important;
+        color: #172a45;
+        font-weight: 400 !important;
+        font-size: 1.4rem !important; }
+
+@keyframes dot {
+  0% {
+    transform: scale(2); }
+  100% {
+    transform: scale(4); } }
+
+.home {
+  width: 100%;
+  min-height: 100vh;
+  padding: 12rem 6rem 6rem 6rem;
+  overflow-x: hidden !important;
+  transition: all 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  z-index: 1; }
+  .home__container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 4rem 8rem 4rem; }
+  .home__desc {
+    flex: 2; }
+    .home__desc-coat h1 {
+      font-family: "Ubuntu", sans-serif !important;
+      color: #315F7A;
+      font-weight: 700 !important;
+      font-size: 6.5rem !important;
+      margin-bottom: 1.5rem; }
+      .home__desc-coat h1::after {
+        content: "";
+        height: 2px;
+        width: 38rem;
+        background-color: #087E8B;
+        display: inline-block;
+        transform: translateY(-1rem);
+        margin-left: 1.7rem; }
+    .home__desc-coat h2 {
+      font-family: "Ubuntu", sans-serif !important;
+      color: #BFD7EA;
+      font-weight: 700 !important;
+      font-size: 5.5rem !important;
+      margin-bottom: 1.5rem; }
+    .home__desc-coat h3 {
+      font-family: "Ubuntu", sans-serif !important;
+      color: #BFD7EA;
+      font-weight: 700 !important;
+      font-size: 5.5rem !important;
+      margin-bottom: 1.5rem; }
+    .home__desc-buttons {
+      display: flex;
+      align-content: center;
+      margin-top: 5rem; }
+  .home__avater {
+    flex: 1;
+    padding-right: 2rem; }
+    .home__avater-img img {
+      max-width: 40rem; }
+  .home__empty {
+    flex: .5; }
+
+.about {
+  width: 100%;
+  min-height: 100vh;
+  padding: 15rem 18rem 6rem;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  transition: all 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .about__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 8rem 4rem; }
+  .about__image {
+    flex: 1; }
+    .about__image-box {
+      width: 30rem;
+      height: 35rem;
+      position: relative;
+      border: 2px solid #BFD7EA;
+      border-radius: 5px; }
+      .about__image-box:hover img {
+        left: -1rem;
+        top: 2.3rem;
+        -webkit-filter: grayscale(0);
+        /* Safari 6.0 - 9.0 */
+        filter: grayscale(0); }
+      .about__image-box img {
+        width: 90%;
+        position: absolute;
+        left: -2rem;
+        top: 3rem;
+        border-radius: 5px;
+        -webkit-filter: grayscale(100%);
+        /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+        transition: all .4s ease; }
+  .about__desc {
+    flex: 1; }
+    .about__desc-heading {
+      font-family: "Ubuntu", sans-serif !important;
+      color: #BFD7EA;
+      font-weight: 500 !important;
+      font-size: 3rem !important;
+      text-transform: uppercase;
+      letter-spacing: 2rem;
+      margin-bottom: 3.5rem; }
+      .about__desc-heading span {
+        display: block; }
+        .about__desc-heading span:not(:last-child) {
+          margin-bottom: 1rem; }
+  .about__paragraph-box {
+    margin-bottom: 2.5rem; }
+    .about__paragraph-box--p {
+      font-family: "Ubuntu Mono", monospace !important;
+      color: #087E8B;
+      font-weight: 400 !important;
+      font-size: 1.4rem !important;
+      padding: 1rem 0; }
+
+.experience {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  opacity: 0;
+  z-index: 0;
+  min-height: 100vh;
+  padding: 15rem 32rem 6rem;
+  visibility: hidden;
+  transition: all 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .experience__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+    margin-top: 6rem; }
+  .experience__header {
+    font-family: "Ubuntu", sans-serif !important;
+    color: #BFD7EA;
+    font-weight: 500 !important;
+    font-size: 2.6rem !important;
+    text-transform: capitalize; }
+    .experience__header h2 {
+      margin-bottom: 8.5rem; }
+      .experience__header h2::after {
+        content: "";
+        height: 2px;
+        width: 38rem;
+        background-color: #087E8B;
+        display: inline-block;
+        transform: translateY(-1rem);
+        margin-left: 1.7rem; }
+  .experience__buttons {
+    width: 90%; }
+    .experience__buttons-box {
+      display: flex;
+      width: 75%;
+      padding: 1rem 0 1.3rem;
+      border-bottom: 1px solid #087E8B; }
+      .experience__buttons-box > button {
+        font-family: "Ubuntu Mono", monospace !important;
+        color: #087E8B;
+        font-weight: 400 !important;
+        font-size: 1.6rem !important;
+        text-transform: uppercase;
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: .4rem 1.8rem; }
+        .experience__buttons-box > button:not(:last-child) {
+          margin-right: 4.5rem; }
+  .experience__content {
+    width: 85%;
+    height: 35rem;
+    margin-top: 2rem;
+    position: relative;
+    overflow-x: hidden; }
+    .experience__content-box {
+      width: 70%;
+      padding: 1.5rem .6rem;
+      position: absolute;
+      transform: translateX(150%);
+      transition: all .6s ease-in-out; }
+    .experience__content-header {
+      font-family: "Ubuntu Mono", monospace !important;
+      color: #BFD7EA;
+      font-weight: 400 !important;
+      font-size: 2.3rem !important;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      margin-bottom: 2.5rem; }
+    .experience__content-paragraph {
+      font-family: "Ubuntu Mono", monospace !important;
+      color: #087E8B;
+      font-weight: 400 !important;
+      font-size: 1.8rem !important;
+      padding-left: 2.2rem; }
+      .experience__content-paragraph ul {
+        list-style-type: circle; }
+      .experience__content-paragraph > ul li:not(:last-child) {
+        margin-bottom: 1.8rem; }
+  .experience #experience1 {
+    transform: translateX(0); }
+  .experience #btn1 {
+    border-left: 1px solid #BFD7EA;
+    color: #BFD7EA; }
+
+.portfolio {
+  width: 100%;
+  min-height: 100vh;
+  padding: 15rem 30rem 6rem;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  display: none;
+  transition: all 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .portfolio__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .portfolio__sub {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow-x: hidden; }
+    .portfolio__sub:not(:last-child) {
+      margin-bottom: 6rem; }
+    .portfolio__sub:hover .portfolio__sub-description {
+      transform: translateX(0);
+      opacity: 1; }
+    .portfolio__sub:hover .portfolio__sub-diagram::before {
+      width: 0;
+      height: 0;
+      transform-origin: center center; }
+    .portfolio__sub:hover .portfolio__sub-diagram h4 {
+      transform: translate(150%, -280%);
+      opacity: 0; }
+    .portfolio__sub-diagram {
+      position: relative;
+      flex: 1;
+      width: 90%;
+      padding: 1rem;
+      margin-right: 2.5rem; }
+      .portfolio__sub-diagram img {
+        width: 58rem;
+        height: 34rem;
+        border-radius: 4px;
+        box-shadow: 0 1rem 3rem -1.5rem rgba(2, 12, 27, 0.7);
+        opacity: 6; }
+      .portfolio__sub-diagram h4 {
+        font-family: "Ubuntu Mono", monospace !important;
+        color: #fff;
+        font-weight: 500 !important;
+        font-size: 2.8rem !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .5s ease-in-out .4s; }
+      .portfolio__sub-diagram::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(39, 48, 67, 0.95);
+        border-radius: 5px;
+        transition: all .5s ease-in-out; }
+    .portfolio__sub-description {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      transform: translateX(100%);
+      opacity: 0;
+      transition: all .6s ease-in-out .3s; }
+      .portfolio__sub-description h2 {
+        font-family: "Ubuntu Mono", monospace !important;
+        color: #BFD7EA;
+        font-weight: 700 !important;
+        font-size: 2.2rem !important;
+        margin-bottom: 1.5rem; }
+      .portfolio__sub-description--box {
+        padding: 1.6rem 2.2rem;
+        background-color: #172a45;
+        width: 120%;
+        border-radius: 4px;
+        box-shadow: 0 1rem 3rem -1.5rem rgba(2, 12, 27, 0.6);
+        margin-bottom: 3rem; }
+        .portfolio__sub-description--box p {
+          font-family: "Ubuntu Mono", monospace !important;
+          color: #9197AE;
+          font-weight: 400 !important;
+          font-size: 1.4rem !important;
+          text-align: right; }
+      .portfolio__sub-description--tools {
+        font-family: "Ubuntu Mono", monospace !important;
+        color: #9197AE;
+        font-weight: 300 !important;
+        font-size: 1.4rem !important;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center; }
+        .portfolio__sub-description--tools h5:not(:last-child) {
+          margin-right: 1.5rem; }
+      .portfolio__sub-description--source {
+        margin-top: 2.2rem; }
+        .portfolio__sub-description--source a {
+          text-decoration: none !important;
+          color: #BFD7EA;
+          font-size: 2rem; }
+          .portfolio__sub-description--source a:not(:last-child) {
+            margin-right: 1.3rem; }
+  .portfolio__sub2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem; }
+    .portfolio__sub2-diagram {
+      flex: 1;
+      width: 90%;
+      padding: 1rem;
+      margin-right: 2.5rem; }
+      .portfolio__sub2-diagram img {
+        width: 58rem;
+        height: 34rem;
+        border-radius: 4px;
+        box-shadow: 0 1rem 3rem -1.5rem rgba(2, 12, 27, 0.7); }
+    .portfolio__sub2-description {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      z-index: 1; }
+      .portfolio__sub2-description h2 {
+        font-family: "Ubuntu Mono", monospace !important;
+        color: #BFD7EA;
+        font-weight: 700 !important;
+        font-size: 2.2rem !important;
+        margin-bottom: 1.5rem; }
+      .portfolio__sub2-description--box {
+        padding: 1.6rem 2.2rem;
+        background-color: #172a45;
+        width: 120%;
+        border-radius: 4px;
+        box-shadow: 0 1rem 3rem -1.5rem rgba(2, 12, 27, 0.6);
+        margin-bottom: 3rem; }
+        .portfolio__sub2-description--box p {
+          font-family: "Ubuntu Mono", monospace !important;
+          color: #9197AE;
+          font-weight: 400 !important;
+          font-size: 1.4rem !important;
+          text-align: left; }
+      .portfolio__sub2-description--tools {
+        font-family: "Ubuntu Mono", monospace !important;
+        color: #9197AE;
+        font-weight: 300 !important;
+        font-size: 1.4rem !important;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center; }
+        .portfolio__sub2-description--tools h5:not(:last-child) {
+          margin-right: 1.5rem; }
+      .portfolio__sub2-description--source {
+        margin-top: 2.2rem; }
+        .portfolio__sub2-description--source a {
+          text-decoration: none !important;
+          color: #BFD7EA;
+          font-size: 2rem; }
+          .portfolio__sub2-description--source a:not(:last-child) {
+            margin-right: 1.3rem; }
+  .portfolio__others {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .portfolio__others-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 10rem; }
+      .portfolio__others-buttons a {
+        font-family: "Ubuntu Mono", monospace !important;
+        color: #BFD7EA;
+        font-weight: 400 !important;
+        font-size: 1.8rem !important;
+        text-decoration: none;
+        display: block;
+        border: 1px solid #BFD7EA;
+        padding: 1rem;
+        margin: 2rem;
+        border-radius: 4px; }
+        .portfolio__others-buttons a:hover {
+          background-color: #087E8B;
+          color: #fff; }
+        .portfolio__others-buttons a.current {
+          background-color: #087E8B;
+          color: #fff;
+          border: 1px solid #087E8B; }
+    .portfolio__others-container {
+      margin-top: 1.5rem;
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+      grid-gap: 1.5rem;
+      transition: all .6s ease-in-out; }
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.2rem 3rem;
+  display: inline-block;
+  border-radius: 4px;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
+
+.btn-primary {
+  position: relative;
+  background: #BFD7EA;
+  background-clip: padding-box;
+  font-family: "Ubuntu Mono", monospace !important;
+  color: #0B3954;
+  font-weight: 400 !important;
+  font-size: 1.8rem !important;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+  transition: background .6 ease; }
+  .btn-primary:hover {
+    background: #0a192f;
+    color: #BFD7EA !important;
+    background-clip: padding-box; }
+  .btn-primary::after {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    background: #BFD7EA;
+    content: '';
+    z-index: -1;
+    border-radius: 4px; }
+
+.btn-secondary {
+  background: #0a192f;
+  background-clip: padding-box;
+  font-family: "Ubuntu Mono", monospace !important;
+  color: #BFD7EA;
+  font-weight: 400 !important;
+  font-size: 1.8rem !important;
+  transition: background .6 ease; }
+  .btn-secondary:hover {
+    background: #BFD7EA;
+    color: #0B3954;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn-secondary::after {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    background: #BFD7EA;
+    content: '';
+    z-index: -1;
+    border-radius: 4px; }
+
+.pages {
+  position: fixed;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3; }
+  .pages > div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between; }
+  .pages__h3 {
+    z-index: 1;
+    font-size: 2.4rem;
+    font-family: "Ubuntu Mono", monospace !important;
+    color: #BFD7EA;
+    font-weight: 400 !important;
+    font-size: 1.8rem !important;
+    padding: 3rem;
+    position: relative;
+    transform: translateX(40%);
+    opacity: 0;
+    transition: all .4s ease-in-out;
+    position: relative; }
+    .pages__h3::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 3rem;
+      width: 2px;
+      transform: translateY(-50%);
+      background-color: #BFD7EA; }
+  .pages__icon {
+    z-index: 2;
+    cursor: pointer;
+    fill: #BFD7EA;
+    opacity: 0.5;
+    transform: scale(2);
+    -webkit-filter: drop-shadow 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    filter: drop-shadow 0 1rem 1rem rgba(0, 0, 0, 0.2); }
+    .pages__icon:hover {
+      animation: dot 0.5s ease-in-out infinite alternate; }
+    .pages__icon.active {
+      opacity: 1; }
+  .pages__icon.active + .pages__h3 {
+    opacity: 1;
+    transform: translateX(0); }
+  .pages__icon:hover + .pages__h3 {
+    opacity: 1;
+    transform: translateX(0); }
+
+.social {
+  position: fixed;
+  top: 50%;
+  transform: translateY(50%);
+  font-family: "Poppins", sans-serif !important;
+  color: #BFD7EA;
+  font-weight: 400 !important;
+  font-size: 1.8rem !important;
+  z-index: 5; }
+  .social ul {
+    list-style-type: none;
+    padding: 0;
+    transform: translateX(-25rem); }
+    .social ul li {
+      display: block;
+      margin: 5px;
+      width: 30rem;
+      text-align: right;
+      padding: 1rem;
+      border-radius: 0 3rem 3rem 0;
+      transition: all .6s; }
+      .social ul li:hover {
+        transform: translateX(11rem); }
+      .social ul li:hover i {
+        transform: rotate(360deg);
+        transition: all 0.6s cubic-bezier(0.6, 0.04, 0.98, 0.335); }
+      .social ul li a {
+        text-decoration: none !important;
+        font-family: "Poppins", sans-serif !important;
+        color: #BFD7EA;
+        font-weight: 400 !important;
+        font-size: 1.8rem !important; }
+        .social ul li a i {
+          text-align: center;
+          margin-left: 1.7rem;
+          color: #BFD7EA;
+          background-color: #0B3954;
+          padding: .6rem;
+          border-radius: 50%;
+          width: 3rem;
+          height: 3rem;
+          transform: rotate(0deg); }
