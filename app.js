@@ -187,4 +187,78 @@ function switchPage() {
     }
     
 }
+
+// ANIMATE TEXT
+function animateText() {
+    const typeWriter = function(stmt, elementTxt, pause = 3000) {
+        this.stmt = stmt;
+        this.elementTxt = elementTxt;
+        this.txt = "";
+        this.wordIndex = 0;
+        this.pause = parseFloat(pause, 10);
+        this.type();
+        this.isDeleting = false;
+    }
+
+    // TYPE METHOD
+    typeWriter.prototype.type = function() {
+        // Current Index of Word
+        const current = this.wordIndex % this.stmt.length;
+
+        // Get full text of current words
+        const fullStmt = this.stmt[current];
+        // console.log(fullStmt);
+
+        // check if it's in the deleting state
+        if (this.isDeleting ) {
+            // remove a char
+            this.txt = fullStmt.substring(0, this.txt.length - 1);
+        }else {
+            // Add char
+            this.txt = fullStmt.substring(0, this.txt.length + 1);
+        }
+        
+        //  Insert txt into elementTxt
+        this.elementTxt.textContent = this.txt;
+
+        // Initial Type Speed 
+        let typeSpeed = 300;
+
+        if (this.isDeleting) {
+          typeSpeed /= 2;  
+        }
+
+        // If word is complete
+        if (!this.isDeleting && this.txt === fullStmt) {
+            // make pause at end
+            typeSpeed = this.pause;
+            this.isDeleting = true;
+        }else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+
+            // move to the next word
+            this.wordIndex++;
+
+            // pause before start typing
+            typeSpeed = 500;
+        }
+
+        setTimeout(() => {
+            this.type();
+        }, typeSpeed)
+    }
+
+    // INIT ON DOM LOAD
+    document.addEventListener('DOMContentLoaded', init);
+
+    // Init function 
+    function init() {
+        const elementTxt = document.querySelector(".home-testtype");
+        const stmt = JSON.parse(elementTxt.getAttribute('data-words')); 
+        const pause = elementTxt.getAttribute("data-wait");
+        // Init Typewriter
+        new typeWriter(stmt, elementTxt, pause)
+    }
+}
+animateText();
 switchPage();

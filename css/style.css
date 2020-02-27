@@ -13,6 +13,15 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-family: "Ubuntu", sans-serif;
@@ -27,6 +36,12 @@ body {
   font-weight: 500 !important;
   font-size: 2.6rem !important;
   text-transform: capitalize; }
+  @media (max-width: 37.5em) {
+    .text__header {
+      font-family: "Ubuntu", sans-serif !important;
+      color: #BFD7EA;
+      font-weight: 500 !important;
+      font-size: 2.2rem !important; } }
   .text__header h2 {
     margin-bottom: 8.5rem; }
     .text__header h2::after {
@@ -37,6 +52,9 @@ body {
       display: inline-block;
       transform: translateY(-1rem);
       margin-left: 1.7rem; }
+      @media (max-width: 37.5em) {
+        .text__header h2::after {
+          width: 4rem; } }
 
 .text__subheader {
   font-family: "Ubuntu", sans-serif !important;
@@ -67,6 +85,9 @@ body {
       z-index: 1;
       padding: 2rem;
       transform: translateY(13rem); }
+      @media (max-width: 56.25em) {
+        .card__face-1 {
+          transform: translateY(0); } }
       .card__face-1 .content {
         position: relative;
         display: flex;
@@ -75,6 +96,9 @@ body {
         align-items: center;
         opacity: .3;
         transition: .5s; }
+        @media (max-width: 56.25em) {
+          .card__face-1 .content {
+            opacity: 1; } }
         .card__face-1 .content h3 {
           font-family: "Ubuntu Mono", monospace !important;
           color: #BFD7EA;
@@ -88,6 +112,9 @@ body {
         display: flex;
         flex-direction: column;
         opacity: .3; }
+        @media (max-width: 56.25em) {
+          .card__face-1 .source {
+            opacity: 1; } }
         .card__face-1 .source a {
           text-decoration: none !important;
           color: #BFD7EA;
@@ -123,6 +150,12 @@ body {
         font-weight: 400 !important;
         font-size: 1.4rem !important; }
 
+@keyframes blink {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 @keyframes dot {
   0% {
     transform: scale(2); }
@@ -136,11 +169,20 @@ body {
   overflow-x: hidden !important;
   transition: all 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   z-index: 1; }
+  @media (max-width: 56.25em) {
+    .home {
+      padding: 7rem 2.5rem 2.5rem 3rem; } }
+  @media (max-width: 37.5em) {
+    .home {
+      padding: 7rem 1.2rem 2rem 1rem; } }
   .home__container {
     display: flex;
     justify-content: center;
     align-content: center;
     padding: 4rem 8rem 4rem; }
+    @media (max-width: 37.5em) {
+      .home__container {
+        padding: 4rem 3.5rem 4rem; } }
   .home__desc {
     flex: 2; }
     .home__desc-coat h1 {
@@ -149,6 +191,12 @@ body {
       font-weight: 700 !important;
       font-size: 6.5rem !important;
       margin-bottom: 1.5rem; }
+      @media (max-width: 37.5em) {
+        .home__desc-coat h1 {
+          font-family: "Ubuntu", sans-serif !important;
+          color: #315F7A;
+          font-weight: 700 !important;
+          font-size: 4.5rem !important; } }
       .home__desc-coat h1::after {
         content: "";
         height: 2px;
@@ -157,18 +205,44 @@ body {
         display: inline-block;
         transform: translateY(-1rem);
         margin-left: 1.7rem; }
+        @media (max-width: 37.5em) {
+          .home__desc-coat h1::after {
+            width: 22rem; } }
     .home__desc-coat h2 {
       font-family: "Ubuntu", sans-serif !important;
       color: #BFD7EA;
       font-weight: 700 !important;
       font-size: 5.5rem !important;
       margin-bottom: 1.5rem; }
+      @media (max-width: 37.5em) {
+        .home__desc-coat h2 {
+          font-family: "Ubuntu", sans-serif !important;
+          color: #BFD7EA;
+          font-weight: 700 !important;
+          font-size: 3.5rem !important; } }
     .home__desc-coat h3 {
       font-family: "Ubuntu", sans-serif !important;
       color: #BFD7EA;
       font-weight: 700 !important;
       font-size: 5.5rem !important;
-      margin-bottom: 1.5rem; }
+      margin-bottom: 1.5rem;
+      position: relative; }
+      @media (max-width: 37.5em) {
+        .home__desc-coat h3 {
+          font-family: "Ubuntu", sans-serif !important;
+          color: #BFD7EA;
+          font-weight: 700 !important;
+          font-size: 3.5rem !important; } }
+      .home__desc-coat h3::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 7rem;
+        border-right: 2px solid #BFD7EA;
+        animation: blink .5s infinite ease; }
+        @media (max-width: 37.5em) {
+          .home__desc-coat h3::after {
+            height: 4rem; } }
     .home__desc-buttons {
       display: flex;
       align-content: center;
@@ -176,6 +250,9 @@ body {
   .home__avater {
     flex: 1;
     padding-right: 2rem; }
+    @media (max-width: 56.25em) {
+      .home__avater {
+        display: none; } }
     .home__avater-img img {
       max-width: 40rem; }
   .home__empty {
@@ -192,19 +269,37 @@ body {
   visibility: hidden;
   z-index: 0;
   transition: all 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  @media (max-width: 56.25em) {
+    .about {
+      padding: 6rem 6rem 6rem;
+      position: static;
+      bottom: auto;
+      left: auto;
+      opacity: 1;
+      visibility: visible;
+      z-index: 1; } }
   .about__container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 4rem 8rem 4rem; }
+    @media (max-width: 56.25em) {
+      .about__container {
+        flex-direction: column-reverse; } }
   .about__image {
     flex: 1; }
+    @media (max-width: 56.25em) {
+      .about__image {
+        margin-top: 7rem; } }
     .about__image-box {
       width: 30rem;
       height: 35rem;
       position: relative;
       border: 2px solid #BFD7EA;
       border-radius: 5px; }
+      @media (max-width: 56.25em) {
+        .about__image-box {
+          position: relative; } }
       .about__image-box:hover img {
         left: -1rem;
         top: 2.3rem;
@@ -243,6 +338,12 @@ body {
       font-weight: 400 !important;
       font-size: 1.4rem !important;
       padding: 1rem 0; }
+      @media (max-width: 56.25em) {
+        .about__paragraph-box--p {
+          font-family: "Ubuntu Mono", monospace !important;
+          color: #087E8B;
+          font-weight: 400 !important;
+          font-size: 1.7rem !important; } }
 
 .experience {
   position: absolute;
@@ -255,6 +356,18 @@ body {
   padding: 15rem 32rem 6rem;
   visibility: hidden;
   transition: all 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  @media (max-width: 56.25em) {
+    .experience {
+      padding: 8rem 7rem 5rem;
+      position: static;
+      bottom: auto;
+      left: auto;
+      opacity: 1;
+      visibility: visible;
+      z-index: 1; } }
+  @media (max-width: 37.5em) {
+    .experience {
+      padding: 4rem 1.6rem 4rem; } }
   .experience__container {
     display: flex;
     flex-direction: column;
@@ -277,13 +390,22 @@ body {
         display: inline-block;
         transform: translateY(-1rem);
         margin-left: 1.7rem; }
+        @media (max-width: 37.5em) {
+          .experience__header h2::after {
+            width: 7rem; } }
   .experience__buttons {
     width: 90%; }
+    @media (max-width: 37.5em) {
+      .experience__buttons {
+        width: 100%; } }
     .experience__buttons-box {
       display: flex;
       width: 75%;
       padding: 1rem 0 1.3rem;
       border-bottom: 1px solid #087E8B; }
+      @media (max-width: 37.5em) {
+        .experience__buttons-box {
+          width: 100%; } }
       .experience__buttons-box > button {
         font-family: "Ubuntu Mono", monospace !important;
         color: #087E8B;
@@ -297,18 +419,27 @@ body {
         padding: .4rem 1.8rem; }
         .experience__buttons-box > button:not(:last-child) {
           margin-right: 4.5rem; }
+          @media (max-width: 37.5em) {
+            .experience__buttons-box > button:not(:last-child) {
+              margin-right: 3.8rem; } }
   .experience__content {
     width: 85%;
     height: 35rem;
     margin-top: 2rem;
     position: relative;
     overflow-x: hidden; }
+    @media (max-width: 37.5em) {
+      .experience__content {
+        width: 100%; } }
     .experience__content-box {
       width: 70%;
       padding: 1.5rem .6rem;
       position: absolute;
       transform: translateX(150%);
       transition: all .6s ease-in-out; }
+      @media (max-width: 37.5em) {
+        .experience__content-box {
+          width: 95%; } }
     .experience__content-header {
       font-family: "Ubuntu Mono", monospace !important;
       color: #BFD7EA;
@@ -345,6 +476,19 @@ body {
   z-index: 0;
   display: none;
   transition: all 0.6s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  @media (max-width: 56.25em) {
+    .portfolio {
+      padding: 8rem 8rem 6rem;
+      position: static;
+      bottom: auto;
+      left: auto;
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+      display: block; } }
+  @media (max-width: 37.5em) {
+    .portfolio {
+      padding: 4.5rem 3rem 4.5rem; } }
   .portfolio__container {
     display: flex;
     flex-direction: column;
@@ -356,6 +500,11 @@ body {
     align-items: center;
     cursor: pointer;
     overflow-x: hidden; }
+    @media (max-width: 37.5em) {
+      .portfolio__sub {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); } }
     .portfolio__sub:not(:last-child) {
       margin-bottom: 6rem; }
     .portfolio__sub:hover .portfolio__sub-description {
@@ -374,12 +523,30 @@ body {
       width: 90%;
       padding: 1rem;
       margin-right: 2.5rem; }
+      @media (max-width: 56.25em) {
+        .portfolio__sub-diagram {
+          width: 70%;
+          margin-top: 1.5rem;
+          flex: 1;
+          height: 60%;
+          margin-right: 2rem; } }
+      @media (max-width: 37.5em) {
+        .portfolio__sub-diagram {
+          grid-column: 1/3;
+          grid-row: 1/2;
+          opacity: .22; } }
       .portfolio__sub-diagram img {
         width: 58rem;
         height: 34rem;
         border-radius: 4px;
         box-shadow: 0 1rem 3rem -1.5rem rgba(2, 12, 27, 0.7);
         opacity: 6; }
+        @media (max-width: 56.25em) {
+          .portfolio__sub-diagram img {
+            width: 49rem; } }
+        @media (max-width: 37.5em) {
+          .portfolio__sub-diagram img {
+            width: 35rem; } }
       .portfolio__sub-diagram h4 {
         font-family: "Ubuntu Mono", monospace !important;
         color: #fff;
@@ -390,6 +557,9 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         transition: all .5s ease-in-out .4s; }
+        @media (max-width: 56.25em) {
+          .portfolio__sub-diagram h4 {
+            display: none; } }
       .portfolio__sub-diagram::before {
         content: "";
         position: absolute;
@@ -400,6 +570,9 @@ body {
         background-color: rgba(39, 48, 67, 0.95);
         border-radius: 5px;
         transition: all .5s ease-in-out; }
+        @media (max-width: 56.25em) {
+          .portfolio__sub-diagram::before {
+            display: none; } }
     .portfolio__sub-description {
       flex: 1;
       display: flex;
@@ -409,6 +582,18 @@ body {
       transform: translateX(100%);
       opacity: 0;
       transition: all .6s ease-in-out .3s; }
+      @media (max-width: 56.25em) {
+        .portfolio__sub-description {
+          flex: 1.5;
+          transform: translateX(0);
+          opacity: 1; } }
+      @media (max-width: 37.5em) {
+        .portfolio__sub-description {
+          width: 90%;
+          padding: 3rem 2rem;
+          margin-top: 7rem;
+          grid-column: 1/-1;
+          grid-row: 1/2; } }
       .portfolio__sub-description h2 {
         font-family: "Ubuntu Mono", monospace !important;
         color: #BFD7EA;
@@ -422,6 +607,11 @@ body {
         border-radius: 4px;
         box-shadow: 0 1rem 3rem -1.5rem rgba(2, 12, 27, 0.6);
         margin-bottom: 3rem; }
+        @media (max-width: 37.5em) {
+          .portfolio__sub-description--box {
+            background-color: transparent;
+            width: 100%;
+            padding: 0; } }
         .portfolio__sub-description--box p {
           font-family: "Ubuntu Mono", monospace !important;
           color: #9197AE;
@@ -443,25 +633,49 @@ body {
         .portfolio__sub-description--source a {
           text-decoration: none !important;
           color: #BFD7EA;
-          font-size: 2rem; }
+          font-size: 2rem;
+          opacity: .75; }
           .portfolio__sub-description--source a:not(:last-child) {
             margin-right: 1.3rem; }
+          .portfolio__sub-description--source a:hover {
+            opacity: 1; }
   .portfolio__sub2 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-bottom: 6rem; }
+    @media (max-width: 37.5em) {
+      .portfolio__sub2 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); } }
     .portfolio__sub2-diagram {
       flex: 1;
       width: 90%;
       padding: 1rem;
       margin-right: 2.5rem; }
+      @media (max-width: 56.25em) {
+        .portfolio__sub2-diagram {
+          width: 70%;
+          flex: 1;
+          margin-right: 2rem; } }
+      @media (max-width: 37.5em) {
+        .portfolio__sub2-diagram {
+          grid-column: 1/3;
+          grid-row: 1/2;
+          opacity: .22; } }
       .portfolio__sub2-diagram img {
         width: 58rem;
         height: 34rem;
         border-radius: 4px;
         box-shadow: 0 1rem 3rem -1.5rem rgba(2, 12, 27, 0.7); }
+        @media (max-width: 56.25em) {
+          .portfolio__sub2-diagram img {
+            width: 49rem; } }
+        @media (max-width: 37.5em) {
+          .portfolio__sub2-diagram img {
+            width: 35rem; } }
     .portfolio__sub2-description {
       flex: 1;
       display: flex;
@@ -469,6 +683,16 @@ body {
       justify-content: center;
       align-items: flex-start;
       z-index: 1; }
+      @media (max-width: 56.25em) {
+        .portfolio__sub2-description {
+          flex: 1.5; } }
+      @media (max-width: 37.5em) {
+        .portfolio__sub2-description {
+          width: 90%;
+          padding: 3rem 2rem;
+          margin-top: 7rem;
+          grid-column: 1/-1;
+          grid-row: 1/2; } }
       .portfolio__sub2-description h2 {
         font-family: "Ubuntu Mono", monospace !important;
         color: #BFD7EA;
@@ -482,6 +706,11 @@ body {
         border-radius: 4px;
         box-shadow: 0 1rem 3rem -1.5rem rgba(2, 12, 27, 0.6);
         margin-bottom: 3rem; }
+        @media (max-width: 37.5em) {
+          .portfolio__sub2-description--box {
+            background-color: transparent;
+            width: 100%;
+            padding: 0; } }
         .portfolio__sub2-description--box p {
           font-family: "Ubuntu Mono", monospace !important;
           color: #9197AE;
@@ -503,9 +732,13 @@ body {
         .portfolio__sub2-description--source a {
           text-decoration: none !important;
           color: #BFD7EA;
-          font-size: 2rem; }
+          font-size: 2rem;
+          opacity: .75; }
           .portfolio__sub2-description--source a:not(:last-child) {
             margin-right: 1.3rem; }
+          .portfolio__sub2-description--source a:hover {
+            transform: scale(1.2);
+            opacity: 1; }
   .portfolio__others {
     margin-top: 10rem;
     display: flex;
@@ -542,6 +775,54 @@ body {
       grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
       grid-gap: 1.5rem;
       transition: all .6s ease-in-out; }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background-color: #020C1B; }
+  @media (max-width: 56.25em) {
+    .footer {
+      position: static;
+      bottom: auto;
+      left: auto; } }
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .footer__container-social {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0 1rem; }
+      @media only screen and (min-width: 56.25em) {
+        .footer__container-social {
+          display: none; } }
+      .footer__container-social ul {
+        list-style-type: none; }
+        .footer__container-social ul:not(:last-child) {
+          margin-right: 2.5rem; }
+        .footer__container-social ul li:hover a i {
+          transform: scale(1.15);
+          opacity: 1; }
+        .footer__container-social ul li a {
+          text-decoration: none;
+          font-size: 2rem; }
+          .footer__container-social ul li a i {
+            color: #BFD7EA;
+            opacity: .5;
+            transition: all .4s ease-in-out; }
+    .footer__container-statement {
+      padding: 1.3rem 0 1rem;
+      font-family: "Ubuntu Mono", monospace !important;
+      color: #BFD7EA;
+      font-weight: 300 !important;
+      font-size: 1.2rem !important; }
+      .footer__container-statement h3 {
+        opacity: .8; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -609,6 +890,12 @@ body {
   top: 50%;
   transform: translateY(-50%);
   z-index: 3; }
+  @media (max-width: 56.25em) {
+    .pages {
+      display: none; } }
+  @media (max-width: 37.5em) {
+    .pages {
+      display: none; } }
   .pages > div {
     display: flex;
     flex-direction: row-reverse;
@@ -664,6 +951,9 @@ body {
   font-weight: 400 !important;
   font-size: 1.8rem !important;
   z-index: 5; }
+  @media (max-width: 56.25em) {
+    .social {
+      display: none; } }
   .social ul {
     list-style-type: none;
     padding: 0;
@@ -697,3 +987,136 @@ body {
           width: 3rem;
           height: 3rem;
           transform: rotate(0deg); }
+
+@media only screen and (min-width: 56.25em) {
+  .navigation {
+    display: none; } }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: #BFD7EA;
+  height: 7rem;
+  width: 7em;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer; }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 4rem;
+      right: 4rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      top: 3rem;
+      right: 3rem; } }
+
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  background-image: radial-gradient(#087E8B, #172a45);
+  z-index: 1000;
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      top: 4.5rem;
+      right: 4.5rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      top: 3.5rem;
+      right: 3.5rem; } }
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1500;
+  opacity: 0;
+  pointer-events: none;
+  width: 0%;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 225%;
+  transition: all .4s; }
+  .navigation__link:link span, .navigation__link:visited span {
+    display: inline-block;
+    margin-right: 1.5rem; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #BFD7EA;
+  transform: translateX(2rem); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%;
+  pointer-events: all; }
+
+.navigation__icon {
+  margin-top: 3.5rem;
+  position: relative; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3rem;
+    height: 2px;
+    background-color: #777;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s; }
+  .navigation__icon::before {
+    top: -.8rem; }
+  .navigation__icon::after {
+    top: .8rem; }
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
