@@ -136,6 +136,20 @@ function switchPage() {
                         // body.style.overflowY = "scroll"
                     }, 600)
                     break;
+                case 4:
+                    pages.forEach(page => {
+                        page.style.visibility = "hidden";
+                        page.style.opacity = "0";
+                        page.style.zIndex = "0";
+                        pages[3].style.display = "none";
+                        
+                    });
+                    setTimeout(() => {
+                        pages[4].style.visibility = "visible";
+                        pages[4].style.opacity = "1";
+                        pages[4].style.zIndex = "1";
+                    }, 600)
+                    break;
 
             }
             // nextPage(index);
@@ -260,5 +274,25 @@ function animateText() {
         new typeWriter(stmt, elementTxt, pause)
     }
 }
-animateText();
+
+function navigation() {
+    const navbg = document.querySelector(".navigation__background")
+    const navcheck = document.querySelector(".navigation__checkbox")
+    const navnv = document.querySelector(".navigation__nav")
+    const tryList = document.querySelectorAll(".navigation__item")
+    
+    tryList.forEach(item => {
+        item.addEventListener("click", () => {
+            if(navcheck.checked === true) {
+                navcheck.checked = false;
+            }
+        });
+    })
+
+        
+
+}
+
 switchPage();
+animateText();
+navigation();
