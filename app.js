@@ -1,3 +1,36 @@
+// bring loader first
+const loader = document.querySelector(".loader");
+const home = document.querySelector(".home");
+const navPage = document.querySelector(".pages");
+const navSocial = document.querySelector(".social");
+const logo = document.querySelector(".header__logo");
+const footer = document.querySelector(".footer");
+
+function initLoader() {
+    setTimeout(() => {
+        loader.style.opacity = "0";
+        loader.style.display = "none";
+
+        setTimeout(() => (logo.style.opacity = "1"), 100);
+
+        home.style.display = "block";
+        setTimeout(() => (home.style.opacity = "1"), 400);
+
+        navPage.style.display = "block";
+        setTimeout(() => (navPage.style.opacity = "1"), 460);
+
+        navSocial.style.display = "block";
+        setTimeout(() => (navSocial.style.opacity = "1"), 460);
+
+        footer.style.display = "block";
+        setTimeout(() => (footer.style.opacity = "1"), 480);
+        
+    }, 3000)
+}
+
+initLoader();
+
+
 // switching the experience tab
 const btn1 = document.getElementById("btn1");
 const btn2 = document.getElementById("btn2");
