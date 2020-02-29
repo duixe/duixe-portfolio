@@ -168,8 +168,6 @@ body {
     transform: scale(4); } }
 
 .home {
-  opacity: 0;
-  display: none;
   width: 100%;
   min-height: 100vh;
   padding: 17rem 6rem 6rem 6rem;
@@ -784,8 +782,6 @@ body {
       transition: all .6s ease-in-out; }
 
 .footer {
-  opacity: 0;
-  display: none;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -978,17 +974,6 @@ body {
         .contact__wrapper-contact form .extend {
           grid-column: 1/3; }
 
-.loader {
-  position: absolute;
-  width: 20rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%); }
-  .loader img {
-    width: 85%;
-    transform: translate3d(0);
-    animation: bounce .65s alternate infinite; }
-
 .header__logo {
   opacity: 0;
   position: absolute;
@@ -1062,8 +1047,6 @@ body {
     border-radius: 4px; }
 
 .pages {
-  opacity: 0;
-  display: none;
   position: fixed;
   right: 5%;
   top: 50%;
@@ -1123,8 +1106,6 @@ body {
     transform: translateX(0); }
 
 .social {
-  opacity: 0;
-  display: none;
   position: fixed;
   top: 50%;
   transform: translateY(50%);
