@@ -6,26 +6,25 @@ const navSocial = document.querySelector(".social");
 const logo = document.querySelector(".header__logo");
 const footer = document.querySelector(".footer");
 
+
+
 function initLoader() {
-    setTimeout(() => {
-        loader.style.opacity = "0";
-        loader.style.display = "none";
+    
 
-        setTimeout(() => (logo.style.opacity = "1"), 100);
+        $(window).on('load', function(){ 
+           
+            $("body").css("overflowY","hidden");
+            setTimeout(() => {
+                $('.loader').fadeOut("slow");
+            }, 3000);
+                
+            setTimeout(() => {
+                $("body").css({"opacity": 0, "visibility": "visible"}).animate({"opacity": 1}, 2000);
+                $("body").css("overflowY","visible");
+            }, 4000);
 
-        home.style.display = "block";
-        setTimeout(() => (home.style.opacity = "1"), 400);
-
-        navPage.style.display = "block";
-        setTimeout(() => (navPage.style.opacity = "1"), 460);
-
-        navSocial.style.display = "block";
-        setTimeout(() => (navSocial.style.opacity = "1"), 460);
-
-        footer.style.display = "block";
-        setTimeout(() => (footer.style.opacity = "1"), 480);
+           });
         
-    }, 3000)
 }
 
 initLoader();
