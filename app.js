@@ -5,8 +5,14 @@ const navPage = document.querySelector(".pages");
 const navSocial = document.querySelector(".social");
 const logo = document.querySelector(".header__logo");
 const footer = document.querySelector(".footer");
+const cursor = document.querySelector(".cursor")
 
 
+// function moveCursor() {
+//     document.addEventListener('mousemove', e => {
+//         cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;");
+//     })
+// }
 
 function initLoader() {
     
@@ -28,6 +34,7 @@ function initLoader() {
 }
 
 initLoader();
+// moveCursor();
 
 
 // switching the experience tab

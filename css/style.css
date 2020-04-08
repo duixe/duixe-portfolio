@@ -163,11 +163,27 @@ body {
     width: 90%;
     transform: translate3d(0, -1.7rem, 0); } }
 
+@keyframes animateCursor {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(0.7); } }
+
+@keyframes animateCursor2 {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(0.4); } }
+
 @keyframes dot {
   0% {
-    transform: scale(2); }
+    transform: scale(2);
+    @media (min-width: 1024px) and (max-width: 1280px) {
+      transform: scale(1.5); } }
   100% {
-    transform: scale(4); } }
+    transform: scale(4);
+    @media (min-width: 1024px) and (max-width: 1280px) {
+      transform: scale(2.5); } } }
 
 .home {
   width: 100%;
@@ -285,6 +301,9 @@ body {
       opacity: 1;
       visibility: visible;
       z-index: 1; } }
+  @media (max-width: 75em) {
+    .about {
+      padding: 6rem 6rem 6rem; } }
   .about__container {
     display: flex;
     justify-content: center;
@@ -500,6 +519,12 @@ body {
       visibility: visible;
       z-index: 1;
       display: block; } }
+  @media (width: 1280px) {
+    .portfolio {
+      padding: 12rem 25rem 6rem 14rem; } }
+  @media (width: 1024px) {
+    .portfolio {
+      padding: 12rem 22rem 6rem 10rem; } }
   @media (max-width: 37.5em) {
     .portfolio {
       padding: 4.5rem 3rem 4.5rem; } }
@@ -523,6 +548,9 @@ body {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 1024px) and (max-width: 1280px) {
+      .portfolio__sub {
+        width: 100%; } }
     .portfolio__sub:not(:last-child) {
       margin-bottom: 6rem; }
     .portfolio__sub:hover .portfolio__sub-description {
@@ -559,12 +587,24 @@ body {
         border-radius: 4px;
         box-shadow: 0 1rem 3rem -1.5rem rgba(2, 12, 27, 0.7);
         opacity: 6; }
+        @media (min-width: 1280px) {
+          .portfolio__sub-diagram img {
+            width: 52rem; } }
+        @media (max-width: 1024px) {
+          .portfolio__sub-diagram img {
+            width: 49rem; } }
         @media (max-width: 56.25em) {
           .portfolio__sub-diagram img {
             width: 49rem; } }
         @media (max-width: 37.5em) {
           .portfolio__sub-diagram img {
             width: 45rem; } }
+        @media (min-width: 375px) and (max-width: 420px) {
+          .portfolio__sub-diagram img {
+            width: 40rem; } }
+        @media (max-width: 320px) {
+          .portfolio__sub-diagram img {
+            width: 34.5rem; } }
       .portfolio__sub-diagram h4 {
         font-family: "Ubuntu Mono", monospace !important;
         color: #fff;
@@ -1060,6 +1100,10 @@ body {
     opacity: 0;
     transition: all .4s ease-in-out;
     position: relative; }
+    @media (min-width: 1024px) and (max-width: 1280px) {
+      .pages__h3 {
+        font-size: 2rem;
+        padding: 2rem; } }
     .pages__h3::after {
       content: "";
       position: absolute;
@@ -1077,6 +1121,9 @@ body {
     transform: scale(2);
     -webkit-filter: drop-shadow 0 1rem 1rem rgba(0, 0, 0, 0.2);
     filter: drop-shadow 0 1rem 1rem rgba(0, 0, 0, 0.2); }
+    @media (min-width: 1024px) and (max-width: 1280px) {
+      .pages__icon {
+        transform: scale(1.4); } }
     .pages__icon:hover {
       animation: dot 0.5s ease-in-out infinite alternate; }
     .pages__icon.active {
