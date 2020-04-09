@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700|Ubuntu:400,500,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&display=swap" rel="stylesheet">  
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        
+        <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/svg" href="img/favicon.png">
+        
+        <title>Duixe website portflio</title>
+    </head>
+    
+    <body>
+        <div class="cursor"></div>
+        <div class="loader">
+            <img src="./img/logo1.png" alt="duixe_logo" srcset="">
+        </div>
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>Home</a></li>
+                    <li class="navigation__item"><a href="#about" class="navigation__link"><span>02</span>About Me</a></li>
+                    <li class="navigation__item"><a href="#experience" class="navigation__link"><span>03</span>Experience</a></li>
+                    <li class="navigation__item"><a href="#work" class="navigation__link"><span>04</span>My Works</a></li>
+                    <li class="navigation__item"><a href="#contact" class="navigation__link"><span>05</span>Contact Me</a></li>
+                    </ul>
+            </nav>
+        </div>
+        <header>
+            <div class="header__logo">
+                <img src="./img/logo1.png" alt="duixe_logo" srcset="">
+            </div>
+            <div class="pages">
+                <div class="page__1"> 
+                    <svg class="pages__icon active" width="12" height="12">
+                        <use xlink:href="img/sprite.svg#icon-home"></use>
+                    </svg>
+                    <h3 class="pages__h3">Home</h3>
+                </div>
+                <div class="page__2">
+                    <svg class="pages__icon " width="12" height="12">
+                        <use xlink:href="img/sprite.svg#icon-user"></use>
+                    </svg>
+                    <h3 class="pages__h3">About</h3>
+                </div>
+                <div class="page__3">
+                    <svg class="pages__icon " width="12" height="12">
+                        <use xlink:href="img/sprite.svg#icon-box"></use>
+                    </svg>
+                    <h3 class="pages__h3">Experience</h3>
+                </div>
+                 <div class="page__4">
+                    <svg class="pages__icon " width="12" height="12">
+                        <use xlink:href="img/sprite.svg#icon-briefcase"></use>
+                    </svg>
+                    <h3 class="pages__h3">Work</h3>
+                </div>
+               <div class="page__5">
+                    <svg class="pages__icon " width="12" height="12">
+                        <use xlink:href="img/sprite.svg#icon-message"></use>
+                    </svg>
+                    <h3 class="pages__h3">Contact</h3>
+                </div>
+            </div>
+            <nav class="social">
+                <ul>
+                    <li class="twitter">
+                        <a href="http://twitter.com/Sundayake" target="_blank">Twitter <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="facebook">
+                        <a href="https://www.facebook.com/emmanuel.sunday.5055" target="_blank">Facebook <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="github">
+                        <a href="https://github.com/duixe" target="_blank">Github <i class="fa fa-github" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="linkedin">
+                        <a href="https://www.linkedin.com/in/emmanuel-sunday-159742152/" target="_blank">LInkedIn <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>  
+            <!-- section  home-->
+            <section class="home page">
+                <div class="home__container">
+                    <div class="home__desc">
+                        <div class="home__desc-coat">
+                            <h1>Hi</h1>
+                            <h2>I'm Emmanuel</h2>
+                            <h3 class="home-testtype" data-wait="3000" data-words='["A Software Engineer", "And a Machine Learning Enthusiast"]'></h3>
+                            <!-- <h3></h3> -->
+                        </div>
+                        <div class="home__desc-buttons">
+                            <a href="mailto:sundux7@gmail.com" class="btn btn-primary u-margin-right">Contact Me</a>
+                            <a href="https://drive.google.com/open?id=15pIfaWU3JavY6pQ2NTfb2md0srgx1aST" target="_blank" class="btn btn-secondary">Get CV</a>
+                        </div>
+                    </div>
+                    <div class="home__avater">
+                        <div class="home__avater-img">
+                            <img src="./img/banner-image.png" alt="duixe-banner">
+                        </div>
+                    </div>
+                    <div class="home__empty">
+
+                    </div>
+                </div> 
+            </section>
+            <!-- end of section -->
+
+            <!-- section About -->
+            <section id="about" class="about page">
+                <div class="about__heading">
+                    &nbsp;
+                </div>
+                <div class="about__container">
+                    <div class="about__image">
+                        <div class="about__image-box">
+                            <img src="img/img-about.jpg" alt="duixe-img">
+                        </div>
+                    </div>
+                    <div class="about__desc">
+                        <h2 class="about__desc-heading">
+                            <span>let me</span>
+                            <span>Introduce</span>
+                            <span>myself</span>
+                        </h2>
+                        <div class="about__paragraph-box">
+                            <p class="about__paragraph-box--p">
+                                Hello, i'm Emmanuel Sunday Akomaning, a result driven and a self motivated Software Engineer,
+                                who currently resides in Accra, Ghana.  
+                            </p>
+                            <p class="about__paragraph-box--p">
+                               Owing to the passion i have for programming and  problem solving, after graduating from the <span>University for Development Studies</span>
+                                Tamale Ghana, with a Bachelor's degree in <span>Computing with Accounting</span>, together with the knowledge
+                                and skills acquired, i decided to take to Software Engineering laying more emphasis on web and 
+                                mobile application. During my leisure time, I enjoy reading and learning new technologies, engaging in sporting activities (particularly football), and listening to gospel accappella music.<br/>
+                                My goal is to improve upon my skills in machine learning (ML) as well as acquiring in depth knowledge on how to 
+                                infuse ML models into web and mobile application. 
+                            </p> 
+                            <p class="about__paragraph-box--p">
+                                These are the few technologies that i'm currently working with: <span>php</span>, <span>Node.js</span>,
+                                <span>Express</span>, <span>python 3 : TensorFlow</span>, <span>Java (intermediate)</span>, <span>JavaScript (ES6)</span>, <span>Flutter</span>, 
+                                <span>Vue</span>, <span>Laravel</span>, <span>Firebase</span>, <span>MySQL and MongoDb</span>, <span>HTML and CSS(SASS)</span>... 
+                            </p>
+                        </div>
+                        <a href="https://drive.google.com/open?id=15pIfaWU3JavY6pQ2NTfb2md0srgx1aST" target="_blank" class="btn btn-primary u-margin-right">Download CV</a>
+                    </div>
+                </div>
+            </section>
+            <!-- end of section about -->
+            <!-- Experience section -->
+            <section id="experience" class="experience page">
+                <div class="experience__container">
+                    <div class="experience__header">
+                        <h2>places i've worked</h2>
+                    </div>
+                    <div class="experience__buttons">
+                        <div class="experience__buttons-box">
+                            <button id="btn1" class="experience__button-box--1">01.&nbsp;Ktu</button>
+                            <button id="btn2" class="experience__buttons-box--2">02.&nbsp;GACL</button>
+                            <button id="btn3" class="experience__buttons-box--3">03.&nbsp;Freelancing</button>
+                        </div>
+                    </div>
+                    <div class="experience__content">
+                        <div id="experience1" class="experience__content-box">
+                            <h1 class="experience__content-header">Network engineer intern @Kofridua Technical University</h1>
+                            <div class="experience__content-paragraph">
+                                <ul>
+                                    <li>
+                                        Managed firewall, monitored network and servers performance and provided performance statistical reports for both 
+                                        real time and historical measurements, ensured network and system availability and recommended network security 
+                                        standard to management. Assisted in multiple construction of virtual local area network.
+                                    </li>
+                                    <li>
+                                        Lead and supervised two other interns in my daily routine as a network engineer intern.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="experience2" class="experience__content-box">
+                            <h1 class="experience__content-header">System Administrator @Ghana Airport Company Limited</h1>
+                            <div class="experience__content-paragraph">
+                                <ul>
+                                    <li>
+                                        Researched and acquired knowledge on how to operate a Building Integration System and then impart the obtained knowledge to the 
+                                        firefighting and safety officers for the effective and successful operation of the Building Integration System.
+                                    </li>
+                                    <li>
+                                        Taught and Trained some firefighting and safety officers in operating and handling the Building Integration System.
+                                    </li>
+                                    <li>
+                                        Helped some of the staff in acquiring basic Computing skills
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="experience3" class="experience__content-box">
+                            <h1 class="experience__content-header">Freelance Web Developer @DUIXE-TECH</h1>
+                            <div class="experience__content-paragraph">
+                                <ul>
+                                    <li>
+                                        i'm currently working as a freelance web and mobile developer and i'm also open to Job offers.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Experience section -->
+
+            <!-- portfolio section -->
+                <section id="work" class="portfolio page">
+                    <div class="portfolio__container">
+                        <div class="text__header">
+                            <h2>few projects i've built</h2>
+                        </div>
+                        <div class="portfolio__sub">
+                            <div class="portfolio__sub-diagram">
+                                <h4>Organic web-app</h4>
+                                <img src="./img/organic.png" alt="organicapp">
+                            </div>
+                            <div class="portfolio__sub-description">
+                                <h2>Organic web-app</h2>
+                                <div class="portfolio__sub-description--box">
+                                    <p>
+                                        A complete Organic food ecommerce web application equipped with a full-featured
+                                        login system and Stripe api payment sytem, built on a vanilla php(MVC) Framework and other
+                                        several libraries.
+                                    </p>
+                                </div>
+                                <div class="portfolio__sub-description--tools">
+                                    <h5>PHP(mvc)</h5>
+                                    <h5>Vue.js</h5>
+                                    <h5>JavaScript</h5>
+                                    <h5>HTML & SASS</h5>
+                                    <h5>Webpack</h5>
+                                    <h5>MySQL</h5>
+
+                                </div>
+                                <div class="portfolio__sub-description--source">
+                                    <a href="http://duixe-organicapp.herokuapp.com" target="_blank"><i class="fa fa-external-link"></i></a>
+                                    <a href="https://github.com/" target="_blank" class="disable" title="private"><i class="fa fa-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio__sub2">
+                            <div class="portfolio__sub2-description">
+                                <h2>Vue-Weather</h2>
+                                <div class="portfolio__sub2-description--box">
+                                    <p>
+                                        A web app for getting weather information in major towns and cities 
+                                        around the world. The app displays the name of the city, current time, temperature(in celcius)
+                                        and the weather condition.
+                                    </p>
+                                </div>
+                                <div class="portfolio__sub2-description--tools">
+                                    <h5>Vue.js</h5>
+                                    <h5>SASS</h5>
+                                    <h5>OpenWeatherMap API</h5>
+                                    <h5>Google Maps Places API</h5>
+                                </div>
+                                <div class="portfolio__sub2-description--source">
+                                    <a href="https://github.com/duixe/vue-weather-app" target="_blank"><i class="fa fa-github"></i></a>
+                                    <a href="https://vue-weather-1fe69.web.app/" target="_blank"><i class="fa fa-external-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="portfolio__sub2-diagram">
+                                <img src="./img/weather.png" alt="Vue-Weather">
+                            </div>
+                        </div>
+                        <div class="portfolio__sub">
+                            <div class="portfolio__sub-diagram">
+                                <h4>Git-Search</h4>
+                                <img src="./img/keeptrack.png" alt="organicapp">
+                            </div>
+                            <div class="portfolio__sub-description">
+                                <h2>KeepTrack</h2>
+                                <div class="portfolio__sub-description--box">
+                                    <p>
+                                        stores organizations's data, specifically department and employees' data thereby mapping every employee
+                                        to their corresponding departments.                    
+                                    </p>
+                                </div>
+                                <div class="portfolio__sub-description--tools">
+                                    <h5>Vue</h5>
+                                    <h5>Vuetify</h5>
+                                    <h5>Firebase</h5>
+                                </div>
+                                <div class="portfolio__sub-description--source">
+                                    <a href="https://github.com/duixe/keeptrack" target="_blink"><i class="fa fa-github"></i></a>
+                                    <a href="https://keeptrack-745f9.web.app/" target="_blank"><i class="fa fa-external-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__others">
+                            <div class="text__subheader">
+                                <h4>Other Notable Projects</h4>
+                            </div>
+                            <div class="portfolio__others-buttons">
+                                <a href="" data-filter="all" class="current">ALL</a>
+                                <a href="" data-filter="apps">APPS</a>
+                            </div>
+                            <div class="portfolio__others-container">
+                                <div class="portfolio__others-box element-item apps">
+                                    <div class="card">
+                                        <div class="card__face card__face-1">
+                                            <div class="content">
+                                                <img src="./img/data.png" alt="data" width="60rem">
+                                                <h3>Git Search</h3>
+                                            </div>
+                                            <div class="source">
+                                                <a href="https://duixe.github.io/gitsearch/" target="_blank"><i class="fa fa-external-link"></i></a>
+                                                <a href="https://github.com/duixe/gitsearch" target="_blank"><i class="fa fa-github"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="card__face card__face-2">
+                                            <div class="content">
+                                                <p>
+                                                    A github search application that filters and fetches users profile,and then displays
+                                                     both the profile and twelve most recent repos of the user. 
+                                                </p>
+                                                <div class="card__face-2--tools">
+                                                    <h5>Vanilla JavaScript</h5>
+                                                    <h5>HTML</h5>
+                                                    <h5>SASS</h5>
+                                                    <h5>Github API</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio__others-box element-item apps">
+                                    <div class="card">
+                                        <div class="card__face card__face-1">
+                                            <div class="content">
+                                                <img src="./img/data.png" alt="data" width="60rem">
+                                                <h3>Simple Todo app</h3>
+                                            </div>
+                                            <div class="source">
+                                                <a href="#" class="disable"><i class="fa fa-external-link"></i></a>
+                                                <a href="https://github.com/duixe/my-task" target="_blank"><i class="fa fa-github"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="card__face card__face-2">
+                                            <div class="content">
+                                                <p>
+                                                    A simple Todo web app that leverages the use of local storage in the browser 
+                                                </p>
+                                                <div class="card__face-2--tools">
+                                                    <h5>JavaScript</h5>
+                                                    <h5>HTML and SASS</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio__others-box element-item">
+                                    <div class="card">
+                                        <div class="card__face card__face-1">
+                                            <div class="content">
+                                                <img src="./img/data.png" alt="data" width="60rem">
+                                                <h3>Python Web Scraper</h3>
+                                            </div>
+                                            <div class="source">
+                                                <a href="#" class="disable"><i class="fa fa-external-link"></i></a>
+                                                <a href="https://github.com/duixe/duixe-py-webscraper" target="_blank"><i class="fa fa-github"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="card__face card__face-2">
+                                            <div class="content">
+                                                <p>
+                                                    A web scraper that crawls and stores the data of a giving website into a
+                                                    SQLite database 
+                                                </p>
+                                                <div class="card__face-2--tools">
+                                                    <h5>Python</h5>
+                                                    <h5>Beautiful Soup</h5>
+                                                    <h5>SQLite</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio__others-box element-item">
+                                    <div class="card">
+                                        <div class="card__face card__face-1">
+                                            <div class="content">
+                                                <img src="./img/data.png" alt="data" width="60rem">
+                                                <h3>My portfolio Website</h3>
+                                            </div>
+                                            <div class="source">
+                                                <a href="#" class="disable"><i class="fa fa-external-link"></i></a>
+                                                <a href="https://github.com/duixe/duixe-portfolio" target="_blank"><i class="fa fa-github"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="card__face card__face-2">
+                                            <div class="content">
+                                                <p>
+                                                    The website you are currently surfing
+                                                </p>
+                                                <div class="card__face-2--tools">
+                                                    <h5>HTML</h5>
+                                                    <h5>SCSS</h5>
+                                                    <h5>JavaScript</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio__others-box element-item apps">
+                                    <div class="card">
+                                        <div class="card__face card__face-1">
+                                            <div class="content">
+                                                <img src="./img/data.png" alt="data" width="60rem">
+                                                <h3>JavaFx calculator</h3>
+                                            </div>
+                                            <div class="source">
+                                                <a href="#" class="disable"><i class="fa fa-external-link"></i></a>
+                                                <a href="https://github.com/duixe/javaFx-simple-calculator" target="_blank"><i class="fa fa-github"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="card__face card__face-2">
+                                            <div class="content">
+                                                <p>
+                                                    A minimal desktop app calculator, built with Java, JavaFx library and scene builder
+                                                </p>
+                                                <div class="card__face-2--tools">
+                                                    <h5>Java</h5>
+                                                    <h5>JavaFx</h5>
+                                                    <h5>Scene Builder</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio__others-box element-item apps">
+                                    <div class="card">
+                                        <div class="card__face card__face-1">
+                                            <div class="content">
+                                                <img src="./img/data.png" alt="data" width="60rem">
+                                                <h3>PremsVentures</h3>
+                                            </div>
+                                            <div class="source">
+                                                <a href="https://premsventures.com" target="_blank"><i class="fa fa-external-link"></i></a>
+                                                <a href="#" class="disable"><i class="fa fa-github"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="card__face card__face-2">
+                                            <div class="content">
+                                                <p>
+                                                    A Wordpress website built for a client (PremsVentures), 
+                                                </p>
+                                                <div class="card__face-2--tools">
+                                                    <h5>wordpress</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            <!-- end of portfolio section -->
+            <!-- Contact Me 1-->
+            <!-- <section id="contact" class="contact page">
+                <div class="conatact__container">
+                    <h1 class="contact__heading">Contact Me</h1>
+                    <div class="contact__wrapper">
+                        <div class="contact__wrapper-info">
+                            <h3>Emmanuel Akomaning</h3>
+                            <ul>
+                                <li><i class="fa fa-road"></i>&nbsp;Accra, Ghana</li>
+                                <li><i class="fa fa-phone"></i>&nbsp;+233 5074 020 64</li>
+                                <li><i class="fa fa-envelope"></i>&nbsp;sundux7@gmail.com</li>
+                            </ul>
+                        </div>
+                        <div class="contact__wrapper-contact">
+                            <h3>Send me an email</h3>
+                            <div class="contact__wrapper-contact--alert">Your Message has been sent</div>
+                            <form id="contactForm">
+                                <p>
+                                    <label>Name</label>
+                                    <input type="text" name="name" id="name" required>
+                                </p>
+                                <p>
+                                    <label>Organization</label>
+                                    <input type="text" name="Organization" id="organization" required>
+                                </p>
+                                <p>
+                                    <label>Email Address</label>
+                                    <input type="email" name="Email" id="email" required>
+                                </p>
+                                <p>
+                                    <label>Phone Number</label>
+                                    <input type="text" name="phone" id="phone">
+                                </p>
+                                <p class="extend">
+                                    <label>Message</label>
+                                    <textarea name="Message" rows="5" id="message" required></textarea>
+                                </p>
+                                <p class="extend">
+                                    <button type="submit" class="btn btn-secondary">Send Message</button>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+            <!-- End of Contact me -->
+             <!-- Contact Me 2-->
+             <section id="contact" class="contact page">
+                <div class="contact__container">
+                    <h1 class="contact__heading">Contact Me</h1>
+                    <div class="contact__wrapper">
+                        <div class="contact__wrapper-contact">
+                            <h4>Send me a Message</h4>
+                            <p>
+                                I'm currently working as a web and mobile development freelancer, however, i'm also
+                                open to job offers and available for project ideas.  
+                            </p>
+
+                            <div class="contact__wrapper-contact--send">
+                                <a href="mailto:sundux7@gmail.com" class="btn btn-secondary u-margin-right">Contact Me</a>
+                            </div>
+                           
+                        </div>
+                        <div class="contact__wrapper-info">
+                            <img src="/img/msg-02.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End of Contact me -->
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__container-social">
+                    <ul>
+                        <li class="twitter">
+                            <a href="http://twitter.com/Sundayake" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="facebook">
+                            <a href=https://www.facebook.com/emmanuel.sunday.5055" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="github">
+                            <a href="http://github.com/duixe"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="linkedin">
+                            <a href="http://"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__container-statement">
+                    <h3>Designed and Developed with passion by Emmanuel Akomaning</h3>
+                </div>
+            </div>
+        </footer>
+
+
+        
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <!-- <script src="./node_modules/jquery/dist/jquery.min.js"></script> -->
+        <!-- <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-database.js"></script> -->
+        <script src="iso.js"></script>
+        <script src="app.js"></script>
+        <!-- <script src="form-handler.js"></script> -->
+    </body>
+</html>
