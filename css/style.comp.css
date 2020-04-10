@@ -185,6 +185,13 @@ body {
     @media (min-width: 1024px) and (max-width: 1280px) {
       transform: scale(2.5); } } }
 
+main {
+  height: auto;
+  background: 0; }
+  @media (max-width: 37.5em) {
+    main {
+      overflow-x: hidden !important; } }
+
 .home {
   width: 100%;
   min-height: 100vh;
@@ -307,6 +314,9 @@ body {
   @media (max-width: 75em) {
     .about {
       padding: 6rem 6rem 6rem; } }
+  @media (max-width: 37.5em) {
+    .about {
+      overflow-x: hidden !important; } }
   .about__container {
     display: flex;
     justify-content: center;
@@ -407,7 +417,8 @@ body {
       z-index: 1; } }
   @media (max-width: 37.5em) {
     .experience {
-      padding: 4rem 1.6rem 4rem; } }
+      padding: 4rem 1.6rem 4rem;
+      overflow-x: hidden; } }
   .experience__container {
     display: flex;
     flex-direction: column;
@@ -461,7 +472,7 @@ body {
           margin-right: 4.5rem; }
           @media (max-width: 37.5em) {
             .experience__buttons-box > button:not(:last-child) {
-              margin-right: 3.8rem; } }
+              margin-right: 2.8rem; } }
   .experience__content {
     width: 85%;
     height: 35rem;
@@ -542,7 +553,8 @@ body {
       padding: 12rem 22rem 6rem 10rem; } }
   @media (max-width: 37.5em) {
     .portfolio {
-      padding: 4.5rem 3rem 4.5rem; } }
+      padding: 4.5rem 3rem 4.5rem;
+      overflow-x: hidden; } }
   .portfolio__container {
     display: flex;
     flex-direction: column;
@@ -748,7 +760,7 @@ body {
             width: 49rem; } }
         @media (max-width: 37.5em) {
           .portfolio__sub2-diagram img {
-            width: 45rem; } }
+            width: 38rem; } }
         @media (min-width: 375px) and (max-width: 420px) {
           .portfolio__sub2-diagram img {
             width: 40rem; } }
@@ -873,6 +885,9 @@ body {
       position: static;
       bottom: auto;
       left: auto; } }
+  @media (max-width: 37.5em) {
+    .footer {
+      overflow-x: hidden !important; } }
   .footer__container {
     display: flex;
     flex-direction: column;
@@ -907,7 +922,8 @@ body {
       font-weight: 300 !important;
       font-size: 1.2rem !important; }
       .footer__container-statement h3 {
-        opacity: .8; }
+        opacity: .8;
+        text-align: center; }
 
 .contact {
   width: 100%;
@@ -990,6 +1006,9 @@ body {
         font-weight: 500 !important;
         font-size: 3.8rem !important;
         margin-bottom: 2.5rem; }
+        @media (max-width: 37.5em) {
+          .contact__wrapper-contact h4 {
+            text-align: center; } }
       .contact__wrapper-contact p {
         font-family: "Ubuntu Mono", monospace !important;
         color: #9197AE;
